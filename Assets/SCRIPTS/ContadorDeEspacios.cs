@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class ContadorDeEspacios : MonoBehaviour
@@ -5,6 +6,9 @@ public class ContadorDeEspacios : MonoBehaviour
     int vecesPulsado = 0;
     Rigidbody rb;
     public float fuerza = 100;
+
+    [SerializeField]
+    TextMeshProUGUI textContador;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,24 +26,25 @@ public class ContadorDeEspacios : MonoBehaviour
         //pulsando 10 veces
         if (vecesPulsado == 10)
         {
+            //textContador.text = "¡Pulsado 10 veces!";
             Debug.Log("Pulsado 10 veces");
             vecesPulsado = 0;
         }
         else
         {
-            Debug.Log("Veces pulsado = " + vecesPulsado);
+            //Debug.Log("Veces pulsado = " + vecesPulsado);
         }
     }
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Entra en colision");
+        //Debug.Log("Entra en colision");
     }
     private void OnCollisionExit(Collision collision)
     {
-        Debug.Log("Sale de colision");
+        //Debug.Log("Sale de colision");
     }
     private void OnCollisionStay(Collision collision)
     {
-        Debug.Log("Mantiene en colision");
+        //Debug.Log("Mantiene en colision");
     }
 }
